@@ -1,0 +1,1157 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    border-radius: 0;
+}
+
+.ui-widget {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#place-root-elfinder-elfinder {
+    display: none;
+}
+
+/* Common */
+
+.ui-state-default.ui-widget-content.ui-state-default, .elfinder .elfinder-button {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    float: none;
+}
+
+.elfinder-button {
+    background: none;
+    border: none !important;
+    border-bottom: thin solid rgba(0, 0, 0, 0) !important;
+}
+
+.elfinder-button .ui-state-disabled {
+    cursor: not-allowed;
+}
+
+.elfinder-button * {
+    transition: opacity 0.3s;
+}
+
+.elfinder-button.ui-state-hover {
+    background: none;
+    cursor: pointer;
+    border: none !important;
+    border-bottom: thin solid rgba(255, 255, 255, 0) !important;
+}
+
+.elfinder-button.ui-state-hover {
+    border-bottom: thin solid rgba(255, 255, 255, 1) !important;
+}
+
+.footer-button .elfinder-button.ui-state-hover {
+    border-bottom: thin solid rgba(0, 0, 0, 1) !important;
+}
+
+.footer-button .elfinder-button {
+    height: 25px;
+    position: relative;
+}
+
+.elfinder-button-text {
+    top: 0;
+    font-size: 15px;
+}
+
+span.elfinder-button-icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 15px;
+    height: 15px;
+    padding: 0 5px;
+    width: 15px;
+}
+
+.elfinder-button-icon-instruct {
+    background: url("../img/question-mark.svg");
+    position: relative;
+    top: 1px
+}
+
+.elfinder-button-icon-submit {
+    background: url("../img/upload.svg");
+}
+
+.elfinder-button-icon-mkdir {
+    background: url("../img/folder-add.svg");
+}
+
+.elfinder-contextmenu .elfinder-button-icon-mkdir {
+    background: url("../img/folder-add-black.svg");
+}
+
+.elfinder-button-icon-undo {
+    background: url("../img/arrow-back.svg");
+}
+
+.elfinder-contextmenu .elfinder-button-icon-undo {
+    background: url("../img/arrow-back-black.svg");
+}
+
+.elfinder-button-icon-redo {
+    background: url("../img/arrow-forward.svg");
+}
+
+.elfinder-contextmenu .elfinder-button-icon-redo {
+    background: url("../img/arrow-forward-black.svg");
+}
+
+.elfinder-button-icon-copy {
+    background: url("../img/tabs-outline.svg");
+}
+
+.elfinder-contextmenu .elfinder-button-icon-copy {
+    background: url("../img/tabs-outline-black.svg");
+}
+
+.elfinder-button-icon-cut {
+    background: url("../img/scissors.svg");
+}
+
+.elfinder-contextmenu .elfinder-button-icon-cut {
+    background: url("../img/scissors-black.svg");
+}
+
+.elfinder-button-icon-paste {
+    background: url("../img/document-text.svg");
+}
+
+.elfinder-contextmenu .elfinder-button-icon-paste {
+    background: url("../img/document-text-black.svg");
+}
+
+.elfinder-button-icon-rm {
+    background: url("../img/delete-outline.svg");
+}
+
+.elfinder-contextmenu .elfinder-button-icon-rm {
+    background: url("../img/delete-outline-black.svg");
+}
+
+.elfinder-button-icon-sort {
+    background: url("../img/arrow-shuffle.svg");
+}
+
+.elfinder-contextmenu .elfinder-button-icon-sort {
+    background: url("../img/arrow-shuffle-black.svg");
+}
+
+.elfinder-button-icon-view {
+    background: url("../img/th-small.svg");
+}
+
+.elfinder-contextmenu .elfinder-button-icon-view {
+    background: url("../img/th-small-black.svg");
+}
+
+.elfinder-button-icon-view-list {
+    background: url("../img/th-list.svg");
+}
+
+.elfinder-contextmenu .elfinder-button-icon-view-list {
+    background: url("../img/th-list-black.svg");
+}
+
+.elfinder-button-icon-rename {
+    background: url("../img/pencil.svg");
+}
+
+.elfinder-button-icon.elfinder-button-icon-open {
+    background: url("../img/device-desktop.svg");
+}
+
+.elfinder-button-icon-duplicate {
+    background: url("../img/tags.svg");
+}
+
+.elfinder-button-icon-getfile {
+    background: url("../img/checkmark-black.svg");
+}
+
+.elfinder-button-icon-selectinvert {
+    background: url("../img/arrow-maximise.svg");
+}
+
+.elfinder-button-icon-opennew {
+    background: url("../img/export.svg");
+}
+
+.elfinder-button-icon-clear {
+    background: url("../img/times.svg");
+}
+
+.elfinder-button-icon-accept {
+    background: url("../img/tick.svg");
+}
+
+.elfinder-button-icon-reload {
+    background: url("../img/arrow-sync.svg");
+}
+
+.elfinder-button-icon-up {
+    background: url("../img/arrow-up-thick.svg");
+}
+
+.elfinder-button-icon-colwidth.elfinder-contextmenu-icon {
+    background: url("../img/arrow-loop-outline.svg");
+}
+
+.elfinder-button-icon-back {
+    background: url("../img/arrow-left-thick.svg");
+}
+
+.elfinder-button-icon-invert {
+    background: url("../img/arrow-back-white.svg");
+    background-size: auto 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* i am not sure what this rule was for */
+
+/* .elfinder .elfinder-contextmenu .elfinder-contextmenu-item span {
+    display: none;
+} */
+
+.elfinder .elfinder-contextmenu-header {
+    font-weight: 500;
+}
+
+.ui-icon.ui-icon-search {
+    background: url("../img/zoom.svg");
+    background-size: auto 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 11px;
+}
+
+.ui-icon.ui-icon-close {
+    background: url("../img/times-black.svg");
+    background-size: auto 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 12px;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-radius: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.elfinder-cwd table tr:nth-child(odd) {
+    background: #D8D8D8;
+}
+
+.elfinder-cwd table thead tr.ui-sortable {
+    background: #C2C4C4;
+    border-bottom: 10px solid black;
+}
+
+.elfinder .elfinder-cwd table thead td.ui-state-active {
+    background: #7C7772;
+}
+
+.elfinder-cwd-wrapper {
+    left: -2px;
+    top: -2px;
+}
+
+td, tr {
+    cursor: pointer !important;
+}
+
+/* header */
+
+.elfinder .elfinder-navbar, .elfinder .elfinder-navdock {
+    width: 270px
+}
+
+.ui-widget-header.elfinder-toolbar {
+    align-items: center;
+    border: none;
+    display: flex;
+    height: 57px;
+    background-color: #087D99 !important;
+    background: #087D99 !important;
+    position: relative;
+    overflow: hidden;
+    min-width: 1100px;
+}
+
+.ui-widget-header.elfinder-toolbar::before {
+    content: ' ';
+    background: url('../img/weather-cloudy.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+}
+
+.elfinder-toolbar .ui-widget-content {
+    border: none;
+    display: flex;
+    color: white;
+}
+
+.elfinder-ltr .elfinder-button-search {
+    float: none;
+    position: absolute;
+    right: 0;
+    width: 220px;
+}
+
+.elfinder .elfinder-button-search.ui-state-active {
+    width: 220px;
+}
+
+.elfinder-toolbar .elfinder-button-text {
+    color: white;
+}
+
+.ui-widget-header.elfinder-toolbar .elfinder-button {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 5px;
+}
+
+.ui-widget-header.elfinder-toolbar .elfinder-button-icon {
+    height: 10px;
+    background-size: auto 10px;
+}
+
+.elfinder-buttonset {
+    align-items: center;
+    display: flex;
+    height: 60px;
+    position: relative;
+    margin-right: 15px;
+    top: 7px;
+}
+
+.elfinder-buttonset:before {
+    position: absolute;
+    top: -1px;
+    font-size: 12px;
+    left: 3px;
+}
+
+/* .elfinder-buttonset-undo-redo {
+    margin-left: 30px;
+} */
+
+.elfinder-buttonset-undo-redo::before {
+    content: 'App Actions';
+}
+
+.elfinder-buttonset-view-sort:before {
+    content: 'View Actions';
+}
+
+.elfinder-buttonset-mkdir-mkfile-upload-copy-cut-paste-rm-empty-hide:before {
+    content: 'File Actions';
+}
+
+.elfinder-button-sort-menu {
+    background: #F0F2F2;
+}
+
+/* Current Working Directory / Status Bar */
+
+.elfinder .elfinder-statusbar {
+    background-color: #57593A;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    /* height: 110px; */
+    min-height: 110px;
+    justify-content: flex-start;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+.elfinder .elfinder-stat-size, .elfinder .elfinder-path, .elfinder .elfinder-stat-selected {
+    /* display: flex; */
+    flex-grow: unset;
+    font-size: 17px;
+    height: 32px;
+    margin: 0;
+    margin-bottom: 4px;
+    text-align: left;
+    /* align-items: flex-end; */
+    overflow: unset;
+    width: 100%;
+}
+
+.elfinder-stat-size div.stat-content, .elfinder-stat-selected div.elfinder-stat-selected-content {
+    font-size: unset;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.elfinder-stat-size .elfinder-stat-incsearch {
+    margin-left: 5px;
+    font-weight: 800;
+}
+
+.elfinder-stat-size span.elfinder-stat-size {
+    margin-left: 10px;
+}
+
+.elfinder-path, div.elfinder-stat-size, .elfinder-stat-selected {
+    position: relative;
+}
+
+.elfinder-path::before, div.elfinder-stat-size::before, .elfinder-stat-selected::before {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    top: -10px;
+}
+
+.elfinder-path::before {
+    content: 'Current Path';
+}
+
+div.elfinder-stat-size::before {
+    content: 'Directory Stats';
+}
+
+.elfinder-stat-selected::before {
+    content: 'Selected File';
+}
+
+/* fixes the list view being too big*/
+
+.elfinder .elfinder-cwd table td {
+    white-space: nowrap;
+}
+
+/* Footer */
+
+.experiment-footer {
+    background-color: #F0F2F2;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    justify-content: space-between;
+}
+
+.experiment-footer-button-container {
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: 5px;
+}
+
+.experiment-footer-time-text {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.experiment-footer-time-readout {
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.experiment-footer-time-readout #clock {
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+.experiment-footer-clockbox {
+    align-items: center;
+    display: flex;
+    height: 30px;
+    justify-content: flex-end;
+    padding-top: 1px;
+    width: 500px;
+}
+
+/* Nav bar */
+
+.elfinder-tree {
+    padding-top: 5px;
+    padding-left: 13px;
+}
+
+.elfinder-tree-dir {
+    background: none;
+    transition: background 0.3s;
+}
+
+.elfinder-tree-dir.ui-state-hover {
+    border-color: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.elfinder-ltr .elfinder-navbar-subtree {
+    margin-left: 15px;
+}
+
+.elfinder-ltr .elfinder-navbar-arrow {
+    left: 5px;
+}
+
+.elfinder-ltr .elfinder-navbar-icon {
+    left: 18px
+}
+
+.elfinder-ltr .elfinder-navbar-dir {
+    padding-left: 45px;
+}
+
+.ui-widget.ui-widget-content {
+    border: none;
+}
+
+.elfinder .elfinder-workzone .elfinder-navbar {
+    background: #F0F2F2 !important;
+    border: none;
+    font-size: 15px;
+    padding: 0;
+    overflow-x: hidden !important;
+}
+
+.elfinder-navbar .ui-state-active {
+    background: #93C3CE;
+    border: none;
+    border-radius: 5px;
+}
+
+.elfinder-navbar .ui-state-active.ui-state-hover {
+    background: #8AB6C1;
+}
+
+.elfinder-tree .elfinder-navbar-icon {
+    background-image: url("../img/folder.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 15px;
+    height: 15px;
+    padding: 0 5px;
+    width: 15px;
+}
+
+.elfinder-navbar .ui-state-active .elfinder-navbar-icon {
+    background-image: url("../img/folder-open.svg");
+}
+
+/* disable dragging in navbar */
+
+div.ui-resizable-handle.ui-resizable-se.ui-icon.ui-icon-gripsmall-diagonal-se {
+    pointer-events: none;
+    display: none !important;
+}
+
+/* icons view */
+
+.elfinder-cwd-view-icons {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.elfinder-cwd-icon {
+    background-image: url("../img/document.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 48px;
+    height: 48px;
+    padding: 0 5px;
+    width: 48px;
+}
+
+.elfinder-cwd-view-list td .elfinder-cwd-icon {
+    background-image: url("../img/document.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 13px;
+    height: 13px;
+    padding: 0 5px;
+    width: 13px;
+}
+
+.directory td .elfinder-cwd-icon, .elfinder-cwd-icon-directory {
+    background-image: url("../img/folder.svg");
+}
+
+.elfinder-ltr .elfinder-cwd-view-icons .elfinder-cwd-file {
+    margin: 0 10px 10px 0;
+}
+
+.ui-selected {
+    background: #CDE5EA;
+    border-radius: 5px;
+    color: black;
+}
+
+.elfinder-cwd-file {
+    /* this enables both hovered and selected things to appear selected */
+    border: thin solid rgba(0, 0, 0, 0) !important;
+}
+
+.elfinder-cwd-file.ui-selected {
+    /* this enables both hovered and selected things to appear selected */
+    border: thin solid hsl(220, 40%, 60%) !important;
+}
+
+.elfinder-cwd table td.ui-state-hover {
+    background: #CDE5EA;
+    color: black;
+}
+
+td {
+    cursor: pointer;
+}
+
+.elfinder-cwd-filename {
+    font-size: 15px;
+}
+
+.ui-selected .elfinder-cwd-filename, .elfinder-cwd-filename.ui-state-active {
+    color: black !important
+}
+
+.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-hover, .ui-selectee .ui-state-active, .elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-active {
+    background: none;
+}
+
+.elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover {
+    background: none;
+}
+
+.elfinder .elfinder-contextmenu-icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 10px;
+    height: 15px;
+    width: 5px;
+}
+
+/* recommendations */
+
+.elfinder-recommend {
+    background: #087D99;
+    color: white;
+    padding: 0 15px;
+    width: calc(321px - 30px);
+    overflow: hidden;
+}
+
+.elfinder-workzone {
+    width: calc(100% - 321px);
+}
+
+.elfinder-recommend-most, .elfinder-recommend-find, .elfinder-recommend-accordion {
+    margin: 0;
+    background: none;
+}
+
+#recheader {
+    margin-top: 18px;
+}
+
+.elfinder-name-hover {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.elfinder-rec-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.elfinder-rec-all-button-text {
+    font-size: 12px;
+    white-space: nowrap;
+    margin-right: 3px;
+}
+
+.elfinder-rec-butts {
+    min-width: 20px;
+    height: 20px;
+    background: white;
+}
+
+.elfinder-new-butt-container {
+    display: flex;
+    align-items: center;
+}
+
+.elfinder-button-icon-clear, .elfinder-button-icon-accept {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 10px;
+    height: 10px;
+    width: 10px;
+}
+
+#reclog, #findheader, .elfinder-recommend-accordion, #moveheader, #removeheader {
+    background: #087D99;
+}
+
+.elfinder-recommend-accordion {
+    color: white;
+    cursor: pointer;
+}
+
+.elfinder-recommend-accordion .rec-section-head::after {
+    content: '+';
+}
+
+.accordion-active .elfinder-recommend-accordion .rec-section-head::after {
+    content: '-';
+}
+
+.elfinder-recommend-accordion::after, .accordion-active:after, #reclog:after {
+    content: '';
+    display: none;
+}
+
+.elfinder-recommend-accordion:hover {
+    background: none;
+}
+
+#recheader {
+    border-bottom: 2px solid white;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.elfinder-new-butt-container {
+    font-weight: normal;
+}
+
+.elfinder-recommend-move, .elfinder-recommend-remove, .elfinder-recommend-find {
+    transition: height 0.5s;
+    overflow-y: auto;
+}
+
+/* i am not sure what this rule was for  */
+
+/* .ui-widget-content .ui-state-default {
+    background: none !important;
+} */
+
+.elfinder-recommend-move {
+    height: calc(3/8 * 100%);
+}
+
+.elfinder-recommend-remove {
+    height: calc(2.5/8 * 100%);
+}
+
+.elfinder-recommend-find {
+    height: calc(1.5/8 * 100%);
+}
+
+.elfinder-recommend-accordion .elfinder-recommend-log {
+    height: 100%;
+    margin-left: 0;
+}
+
+.elfinder-recommend-accordion {
+    height: calc(0.5/8 * 100%);
+}
+
+.accordion-active .elfinder-recommend-move {
+    height: calc(2.5/8 * 100%);
+}
+
+.accordion-active .elfinder-recommend-remove {
+    height: calc(1.25/8 * 100%);
+}
+
+.accordion-active .elfinder-recommend-find {
+    height: calc(1.25/8 * 100%);
+}
+
+.accordion-active .elfinder-recommend-accordion {
+    height: calc(2/8 * 100%);
+}
+
+.elfinder-recommend-remove .elfinder-rec-label, .elfinder-recommend-find .elfinder-rec-label {
+    font-size: 14px;
+}
+
+.elfinder-recommend-accordion {
+    font-size: 14px;
+    padding: 0;
+}
+
+.elfinder-name-hover {
+    cursor: pointer;
+}
+
+.elfinder-new-rec {
+    background: #F0F2F2;
+    border-radius: 5px;
+    color: black;
+    font-weight: normal !important;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.elfinder-button-icon-exit, .elfinder-button-icon-exit:hover, .elfinder-button-icon-exit-hover {
+    background: url("../img/times.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 10px;
+    background-color: none !important;
+    height: 10px;
+    padding: 0 5px;
+    width: 10px;
+}
+
+.elfinder-button-icon-exit, .elfinder-rec-butts {
+    cursor: pointer;
+}
+
+.elfinder-new-rec-content {
+    font-size: 13px;
+    padding: 5px 10px;
+}
+
+.elfinder-new-rec-row-left-label {
+    text-align: right;
+    width: 36px;
+}
+
+#moveheader {
+    margin-bottom: 10px;
+}
+
+.elfinder-new-butt-container {
+    padding-right: 0;
+}
+
+.elfinder-rec-button-container {
+    align-items: center;
+    background: #8AAD4D;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: -4px;
+}
+
+#moveheader .elfinder-rec-button-container {
+    background: #8AAD4D;
+}
+
+#removeheader .elfinder-rec-button-container {
+    background: #98001C;
+}
+
+#findheader .elfinder-rec-button-container {
+    background: #57593A;
+}
+
+.elfinder-recommend-accordion .elfinder-rec-button-container {
+    background: #7C7772;
+}
+
+.elfinder-acc-butt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elfinder-rec-explain {
+    pointer-events: none;
+}
+
+#rec-hover-tool {
+    border-radius: 5px;
+    background: white;
+    min-height: 50px;
+    width: 360px;
+    padding: 10px;
+    box-shadow: 3px 4px 4px 0 rgb(0 0 0 / 50%);
+    max-width: 350px;
+    /* white-space: break-spaces; */
+    overflow: hidden;
+}
+
+.empty-recs-msg {
+    font-weight: 200;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* error styling */
+
+.elfinder-dialog {
+    box-shadow: 3px 4px 4px 0 rgba(0, 0, 0, 0.50);
+}
+
+.ui-dialog-titlebar {
+    background: #57593A;
+    color: white;
+}
+
+.elfinder-dialog-error .ui-dialog-titlebar {
+    background: #A62B32;
+}
+
+.ui-dialog-content.ui-widget-content {
+    padding: 10px;
+}
+
+.elfinder-dialog-error .ui-dialog-content.ui-widget-content {
+    padding-left: 70px;
+}
+
+.std42-dialog .ui-dialog-titlebar .elfinder-titlebar-button .ui-icon, .ui-icon-closethick, .ui-widget-header .ui-icon {
+    background-image: url("../img/times.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 13px;
+    height: 13px;
+    padding: 0 5px;
+    width: 13px;
+    opacity: 1 !important;
+}
+
+.std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover .ui-icon, .elfinder-mobile .std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon, .elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-close:hover, .elfinder-mobile .elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-close {
+    background-color: none;
+    background-image: url("../img/times.svg");
+    border: none;
+}
+
+.elfinder-dialog-modal .elfinder-rm-title .elfinder-cwd-icon:before {
+    left: 0;
+}
+
+.elfinder-dialog-icon {
+    background-image: url("../img/warning.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 32px;
+    height: 32px;
+    padding: 0 5px;
+    width: 32px;
+    display: none;
+}
+
+.elfinder-dialog-error .elfinder-dialog-icon {
+    display: block;
+}
+
+.elfinder-dialog .ui-button-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.elfinder-dialog .elfinder-rm-title {
+    position: relative;
+}
+
+/* Instructions */
+
+.instruction-header {
+    height: 50px;
+    width: 100%;
+    color: white;
+    background-color: #087D99;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.instruction-body {
+    padding: 10px;
+}
+
+.instruction-body br {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.file-type-icon-csv, .file-type-icon-json {
+    background: url("../img/data-table.svg");
+    background-repeat: no-repeat;
+    background-size: auto 56px;
+    width: 53px
+}
+
+/* text image spreadsheet media presentation  */
+
+div.file-type-icon-text {
+    /* do nothing this is the default */
+}
+
+/* Icon view */
+
+div.file-type-icon-image {
+    background: url("../img/image.svg");
+    background-position: 0px ​3px;
+    background-repeat: no-repeat;
+    background-size: auto 45px;
+    width: 49px
+}
+
+div.file-type-icon-spreadsheet {
+    background: url("../img/data-table.svg");
+    background-position: -3px -7px;
+    background-repeat: no-repeat;
+    background-size: auto 65px;
+    width: 70px;
+}
+
+div.file-type-icon-media {
+    background: url("../img/media.svg");
+    background-position: -3px -7px;
+    background-repeat: no-repeat;
+    background-size: auto 65px;
+    width: 70px;
+}
+
+div.file-type-icon-presentation {
+    background: url("../img/presentation.svg");
+    background-position: 1px 4px;
+    background-repeat: no-repeat;
+    background-size: auto 57px;
+    width: 70px;
+}
+
+/* List view */
+
+.elfinder-cwd-view-list td span.file-type-icon-image {
+    background: url("../img/image.svg");
+    background-position: 4px 1px;
+    background-repeat: no-repeat;
+    background-size: auto 12px;
+    height: 42px;
+}
+
+.elfinder-cwd-view-list td span.file-type-icon-spreadsheet {
+    background: url("../img/data-table.svg");
+    background-position: 2.5px -2px;
+    background-repeat: no-repeat;
+    background-size: auto 18px;
+    width: 20px;
+}
+
+.elfinder-cwd-view-list td span.file-type-icon-media {
+    background: url("../img/media.svg");
+    background-position: 3px -1px;
+    background-repeat: no-repeat;
+    background-size: auto 18px;
+    height: 42px;
+}
+
+.elfinder-cwd-view-list td span.file-type-icon-presentation {
+    background: url("../img/presentation.svg");
+    background-position: 4px ​-1xp;
+    background-repeat: no-repeat;
+    background-size: auto 16px;
+    height: 40px;
+}
+
+/* Control the file type display */
+
+.elfinder-cwd-icon:before {
+    left: -3px;
+}
+
+.elfinder-cwd-icon-application::before {
+    background: #8AAD4D;
+}
+
+/* Tutorial */
+
+.driver-popover-item, .driver-popover-description, .driver-popover-title {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+div#driver-popover-item .driver-popover-footer button {
+    color: white;
+    background: #087D99;
+    font-family: 'Montserrat', sans-serif !important;
+    text-shadow: none;
+}
+
+/* Study popover */
+
+.footer-button .elfinder-button#study-submit-button {
+    pointer-events: unset;
+    opacity: 1;
+}
+
+.footer-button .elfinder-button#study-submit-button.ui-button-disabled .elfinder-button-text, .footer-button .elfinder-button#study-submit-button.ui-button-disabled .elfinder-button-icon {
+    opacity: 0.35;
+}
+
+.study-instruct-popover {
+    display: none;
+}
+
+.ui-button-disabled:hover .study-instruct-popover {
+    display: inline;
+    position: absolute;
+    background: white;
+    padding: 5px;
+    color: black;
+    top: -80px;
+    border-radius: 5px;
+    box-shadow: 3px 4px 4px 0 rgb(0 0 0 / 50%);
+    width: 240px;
+}
+
+div.study-instruct-popover:before, div.study-instruct-popover:after {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 10px solid transparent;
+    /* arrow size */
+}
+
+div.study-instruct-popover:before {
+    /* top-stacked, smaller arrow */
+    border-top-color: #fff;
+    position: absolute;
+    top: 65px;
+    left: 15px;
+    z-index: 2;
+}
+
+div.study-instruct-popover:after {
+    /* arrow which acts as a background shadow */
+    border-top-color: #333;
+    position: absolute;
+    top: 68px;
+    left: 15px;
+    z-index: 1;
+}
+
+.elfinder-new-rec .elfinder-rec-butts.ui-state-default {
+    background: none;
+}

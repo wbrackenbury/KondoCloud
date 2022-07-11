@@ -1,0 +1,352 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+
+<section class="main-content">
+  <div class="container">
+
+    <div id="divElement">
+
+      <h3 style="text-align: center; color: #447BB7">Group Actions Together</h3>
+
+      <hr>
+      <h4 style="text-align: justify; line-height: 23px;">
+
+        In the table below, each row indicates an action that you performed
+        during this organizational task (e.g., MAKE FOLDER). Often, these
+        individual actions are parts of a single,
+        higher-level organizational task.
+        For example, MAKE FOLDER "Vacation Pictures" may be the first action
+        in the larger task of "Moving all my vacation pictures into a single
+        folder".
+
+        <br><br>
+
+        For each higher-level task that the actions are part of, we would
+        like you to create what we will call a "header". Please give each
+        header you create a title that summarizes the higher-level task
+        for the included actions. You create headers by hovering
+        between the rows with actions and clicking "Add Header". You may
+        reorder rows by clicking and dragging them.
+
+        <br><br>
+
+        When finished, the rows should be in an order such as, First Header,
+        Action for First Header, Action for First Header, Second Header,
+        Action for Second Header, etc. When you are finished, please click the
+        button below the table.
+
+        <!-- In the table below, we ask that you group together the individual -->
+        <!-- organization that you took (e.g., moving a file into another folder) -->
+        <!-- into the high-level organizational tasks that you were accomplishing -->
+        <!-- with them (e.g., creating a new folder called "Vacation Pictures" and -->
+        <!-- moving several files into that folder is an organizational task, -->
+        <!-- "Organizing my vacation pictures"). We ask that you do this -->
+        <!-- by creating "header rows", that consist of a title and a description -->
+        <!-- of the organizational task, and group together the -->
+        <!-- action rows underneath them. -->
+
+        <!-- <br><br> -->
+
+        <!-- You may reorder actions in the table by clicking and dragging them, -->
+        <!-- and add header rows to describe the actions underneath them by hovering -->
+        <!-- over the space between the rows and clicking. -->
+
+        <!-- <br><br> -->
+
+        <!-- When you are finished, please click the button below the table. -->
+
+        <!-- <br><br> -->
+
+
+
+  <script type="text/javascript">
+
+    var group_post = function() {
+
+
+          var post_rows = [];
+
+          $.each($('#actlist').children(), function(index, c) {
+
+              console.log(c);
+
+              var classes = c.classList;
+
+              if (classes.contains("head_bullet")) {
+
+                  var to_add = {row_type: "header",
+                                row_title: $(c).find('.header_row')[0].value,
+                                explain: ""};
+                                //explain: $(c).find('.explain')[0].value};
+
+                  post_rows.push(to_add);
+
+              } else if (classes.contains("data_row")) {
+
+                  var to_add = {row_type: "data",
+                                command: $(c).find('.overarch')[0].id};
+
+                  post_rows.push(to_add);
+
+              };
+
+          });
+
+          $.post("{{ url_for('group_post') }}", {'cmd_ids': post_rows});
+
+    };
+
+
+  </script>
+
+        <div id="table-wrapper">
+        <div id="table-scroll">
+
+
+          <ul id="actlist" style="list-style-type: none;">
+
+
+
+            {% for row in commands  %}
+
+
+            <li class="data_row">
+
+            <div class="plus_bullet">
+              <div class="plus_row">
+                <svg class = "svg_lines" height="18px" width="100%">
+                  <line x1="0" y1="9" x2="45%" y2="9" style="stroke:#4173a6;stroke-width:2"/>
+                  <text x="46%" y="14">Add Header</text>
+                  <line x1="56%" y1="9" x2="100%" y2="9" style="stroke:#4173a6;stroke-width:2"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="data_spec">
+              <span class="overarch" id="{{ row[6] }}">
+                <span class="one">{{ row[0] }}</span>
+                <span class="two">{{ row[1] }}</span>
+                <span class="three">{{ row[2] }}</span>
+                <span class="four">{{ row[3] }}</span>
+              </span>
+            </div>
+            </li>
+
+
+            {% endfor  %}
+
+
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+
+
+  <script>
+    function selectElementContents(el) {
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+    };
+
+
+    $("#actlist").sortable({cancel: 'input,textarea,button,select,option,[contenteditable],.plus_bullet,.head_bullet'});
+      $(".plus_bullet").on('click', function() {
+
+          var bullet = $("<li class='head_bullet'></li>"),
+              header_hold = $("<div class='header_hold'></div>"),
+              pretitle = $("<div class='pre_header' tooltip='Expand / minimize explanation'><b>&#x2212;</b></div>"),
+              title = $("<input class='header_row' type='text' value='(Header Name)'></input>"),
+              posttitle = $("<div tooltip='Delete header row' class='pre_header'><b>&#x2716;</b></div>"),
+              explain = $("<textarea class='explain' cols='40' rows='2'>(Description)</textarea>");
+
+          //header_hold.append(pretitle);
+          header_hold.append(title);
+          header_hold.append(posttitle);
+          bullet.append(header_hold);
+          //bullet.append(explain);
+
+          $(this).parent().before(bullet);
+          $(bullet).children('div').keypress(function(e) {
+
+              if (e.which != 13) {
+                  return true;
+              } else {
+                  $(this).blur();
+              }
+
+          });
+
+          title.focus();
+          title.select();
+
+          title.on('focus', function() {$(this).css({'border': 'solid'});}).
+              on('blur', function() {$(this).css({'border': 'none'});});
+
+          explain.on('focus', function() {
+              $(this).css({'border': 'solid'});
+              console.log($(explain)[0].value);
+              if ($(explain)[0].value === '(Description)') {
+                  $(this).select();
+              }
+          }).
+               on('blur', function() {$(this).css({'border': 'none'});});
+
+
+          pretitle.on('click', function() {
+
+              if (explain[0].classList.contains("explain_small")) {
+                  $(this)[0].innerHTML = "&#x2212;";
+              } else {
+                  $(this)[0].innerHTML = "&#x2B;";
+              }
+
+              explain[0].classList.toggle("explain_small");
+          });
+
+          posttitle.on('click', function() {
+               $(this).parent().parent().remove();
+          });
+
+
+          if ($('#submit-button').prop('disabled')) {
+              $('#submit-button').prop('disabled', false);
+          }
+      });
+
+      $(".plus_bullet").on('mouseenter', function() {
+
+          $(this).find('.svg_lines').css({'display': 'inline'});
+      });
+
+      $(".plus_bullet").on('mouseleave', function() {
+
+          $(this).find('.svg_lines').css({'display': 'none'});
+      });
+
+
+    $("#table-wrapper").resizable();
+
+
+    var tutorial = function() {
+
+        const driver = new Driver({'allowClose': false,
+                                   'onReset': function() {
+                                       var head = $("#head_ex"),
+                                           chosen_row = $('.chosen_examp');
+
+                                       if (head.length) {
+                                           head.remove();
+                                       }
+
+                                       if (chosen_row.length) {
+                                           chosen_row.css({'height': '6px'}).removeClass('chosen_examp');
+                                       }
+                                   }});
+
+
+        var bullet = $("<li id='head_ex' class='head_bullet'></li>"),
+            header_hold = $("<div class='header_hold'></div>"),
+            pretitle = $("<div id='head_ex_pre' class='pre_header'><b>&#x2B;</b></div>"),
+            title = $("<input class='header_row' type='text' style='border: none;' value='Vacation Pictures'></input>"),
+            posttitle = $("<div id='head_ex_post' class='pre_header'><b>&#x2716;</b></div>"),
+            explain = $("<textarea class='explain' cols='40' rows='2' style='border: none;'>I wanted to move all my vacation pictures into the same folder. I also deleted a few that were duplicates.</textarea>");
+
+        header_hold.append(pretitle);
+        header_hold.append(title);
+        header_hold.append(posttitle);
+        bullet.append(header_hold);
+        bullet.append(explain);
+        $('#actlist').children('.data_row').first().find('.plus_row').css({'height': '18px'}).addClass('chosen_examp');
+
+        $('#actlist').prepend(bullet);
+        $('#head_ex').css({'visibility': 'collapse'});
+
+        driver.defineSteps([
+            {
+                element: '#actlist',
+                popover: {
+                    title: 'Organization',
+                    description: "The rows currently in this table are the actions you took during this organizational task. The individual actions, however, may not represent the larger task that you may have been working on.",
+                    position: 'right'
+                },
+                onNext: function() {
+                    $('.chosen_examp').find('.svg_lines').css({'display': 'inline'});
+                }
+            },
+            {
+                element: '.chosen_examp',
+                popover: {
+                    title: 'Creating a Header Row',
+                    description: "To group together individual actions into the larger organizational tasks, we ask that you create 'header rows'. By hovering over the spaces between action rows, you will be presented with a line such as this. Clicking on it will create a header row.",
+                    position: 'right'
+                },
+                onNext: function() {
+                    $('.chosen_examp').find('.svg_lines').css({'display': 'none'});
+                    $('.chosen_examp').css({'height': '6px'}).removeClass('chosen_examp');
+                    $('#head_ex').css({'visibility': 'visible'});
+                }
+            },
+            {
+                element: '#head_ex',
+                popover: {
+                    title: 'Header Row',
+                    description: "A header row looks like this. We consider any action rows underneath this header row and before another header row to be sub-actions of the sub task described by the row.",
+                    position: 'right'
+                }
+            },
+            {
+                element: '#head_ex_post',
+                popover: {
+                    title: 'Deleting Header Rows',
+                    description: "If you make a row by accident, you can click this button to delete the row.",
+                    position: 'right'
+                },
+            },
+            {
+                element: '#head_ex_pre',
+                popover: {
+                    title: 'Toggle Visibility',
+                    description: "To toggle whether a header row's description is visible, you can press this button.",
+                    position: 'right'
+                },
+                onNext: function() {
+                    $('#head_ex').remove();
+                }
+            },
+            {
+                element: '#actlist',
+                popover: {
+                    title: 'Reordering',
+                    description: "To reorder action rows, you may click and drag them underneath the appropriate header row.",
+                    position: 'right'
+                }
+            }
+
+        ]);
+
+        driver.start();
+
+    };
+
+    //tutorial();
+
+    </script>
+
+
+  <div class="button-container">
+    <button id='submit-button' onclick="group_post(); window.location.href = '{{ url_for('start_content') }}';" style="width: 50%;" disabled>I am satisfied with this arrangement.</button>
+  </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

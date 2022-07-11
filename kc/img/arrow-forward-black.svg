@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="10px" viewBox="0 0 11 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>arrow-forward-black</title>
+    <desc>Created with Sketch.</desc>
+    <g id="inversion" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow-forward-black" fill="#000000" fill-rule="nonzero">
+            <path d="M6.1875,0 C6.0115,0 5.8355,0.0666875 5.701437,0.20075 C5.567375,0.3355 5.5,0.5115 5.5,0.6875 L5.5,2.4468125 C2.40625,2.7891875 0,5.40925 0,8.59375 L0,9.28125 C1.543437,6.9279375 3.609375,6.58625 5.5,6.5388125 L5.5,8.25 C5.5,8.4253125 5.567375,8.602 5.701437,8.7360625 C5.8355,8.870125 6.0115,8.9375 6.1875,8.9375 C6.3635,8.9375 6.5395,8.870125 6.673563,8.7360625 L11,4.46875 L6.673563,0.20075 C6.5395,0.0666875 6.3635,0 6.1875,0 Z" id="arrow-forward"></path>
+        </g>
+    </g>
+</svg>

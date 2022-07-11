@@ -1,0 +1,504 @@
+div.precise-file-type-icon-txt::before {
+    content: 'txt' !important;
+    ;
+}
+
+div.precise-file-type-icon-doc::before {
+    content: 'doc' !important;
+    ;
+}
+
+div.precise-file-type-icon-docx::before {
+    content: 'docx' !important;
+    ;
+}
+
+div.precise-file-type-icon-rtf::before {
+    content: 'rtf' !important;
+    ;
+}
+
+div.precise-file-type-icon-dotx::before {
+    content: 'dotx' !important;
+    ;
+}
+
+div.precise-file-type-icon-dot::before {
+    content: 'dot' !important;
+    ;
+}
+
+div.precise-file-type-icon-odt::before {
+    content: 'odt' !important;
+    ;
+}
+
+div.precise-file-type-icon-pages::before {
+    content: 'pages' !important;
+    ;
+}
+
+div.precise-file-type-icon-tex::before {
+    content: 'tex' !important;
+    ;
+}
+
+div.precise-file-type-icon-pdf::before {
+    content: 'pdf' !important;
+    ;
+}
+
+div.precise-file-type-icon-ps::before {
+    content: 'ps' !important;
+    ;
+}
+
+div.precise-file-type-icon-eps::before {
+    content: 'eps' !important;
+    ;
+}
+
+div.precise-file-type-icon-prn::before {
+    content: 'prn' !important;
+    ;
+}
+
+div.precise-file-type-icon-pages::before {
+    content: 'pages' !important;
+    ;
+}
+
+div.precise-file-type-icon-jpg::before {
+    content: 'jpg' !important;
+    ;
+}
+
+div.precise-file-type-icon-jpeg::before {
+    content: 'jpeg' !important;
+    ;
+}
+
+div.precise-file-type-icon-png::before {
+    content: 'png' !important;
+    ;
+}
+
+div.precise-file-type-icon-tiff::before {
+    content: 'tiff' !important;
+    ;
+}
+
+div.precise-file-type-icon-tif::before {
+    content: 'tif' !important;
+    ;
+}
+
+div.precise-file-type-icon-gif::before {
+    content: 'gif' !important;
+    ;
+}
+
+div.precise-file-type-icon-bmp::before {
+    content: 'bmp' !important;
+    ;
+}
+
+div.precise-file-type-icon-heic::before {
+    content: 'heic' !important;
+    ;
+}
+
+div.precise-file-type-icon-tga::before {
+    content: 'tga' !important;
+    ;
+}
+
+div.precise-file-type-icon-dae::before {
+    content: 'dae' !important;
+    ;
+}
+
+div.precise-file-type-icon-tsv::before {
+    content: 'tsv' !important;
+    ;
+}
+
+div.precise-file-type-icon-csv::before {
+    content: 'csv' !important;
+    ;
+}
+
+div.precise-file-type-icon-xls::before {
+    content: 'xls' !important;
+    ;
+}
+
+div.precise-file-type-icon-xlsx::before {
+    content: 'xlsx' !important;
+    ;
+}
+
+div.precise-file-type-icon-xltx::before {
+    content: 'xltx' !important;
+    ;
+}
+
+div.precise-file-type-icon-xlt::before {
+    content: 'xlt' !important;
+    ;
+}
+
+div.precise-file-type-icon-ods::before {
+    content: 'ods' !important;
+    ;
+}
+
+div.precise-file-type-icon-xlsb::before {
+    content: 'xlsb' !important;
+    ;
+}
+
+div.precise-file-type-icon-xlsm::before {
+    content: 'xlsm' !important;
+    ;
+}
+
+div.precise-file-type-icon-xltm::before {
+    content: 'xltm' !important;
+    ;
+}
+
+div.precise-file-type-icon-json::before {
+    content: 'json' !important;
+    ;
+}
+
+div.precise-file-type-icon-mtp::before {
+    content: 'mtp' !important;
+    ;
+}
+
+div.precise-file-type-icon-itlp::before {
+    content: 'itlp' !important;
+    ;
+}
+
+div.precise-file-type-icon-nef::before {
+    content: 'nef' !important;
+    ;
+}
+
+div.precise-file-type-icon-asf::before {
+    content: 'asf' !important;
+    ;
+}
+
+div.precise-file-type-icon-cbr::before {
+    content: 'cbr' !important;
+    ;
+}
+
+div.precise-file-type-icon-flv::before {
+    content: 'flv' !important;
+    ;
+}
+
+div.precise-file-type-icon-djvu::before {
+    content: 'djvu' !important;
+    ;
+}
+
+div.precise-file-type-icon-mod::before {
+    content: 'mod' !important;
+    ;
+}
+
+div.precise-file-type-icon-mpg::before {
+    content: 'mpg' !important;
+    ;
+}
+
+div.precise-file-type-icon-cur::before {
+    content: 'cur' !important;
+    ;
+}
+
+div.precise-file-type-icon-psd::before {
+    content: 'psd' !important;
+    ;
+}
+
+div.precise-file-type-icon-3gp::before {
+    content: '3gp' !important;
+    ;
+}
+
+div.precise-file-type-icon-pak::before {
+    content: 'pak' !important;
+    ;
+}
+
+div.precise-file-type-icon-flac::before {
+    content: 'flac' !important;
+    ;
+}
+
+div.precise-file-type-icon-heic::before {
+    content: 'heic' !important;
+    ;
+}
+
+div.precise-file-type-icon-thm::before {
+    content: 'thm' !important;
+    ;
+}
+
+div.precise-file-type-icon-grf::before {
+    content: 'grf' !important;
+    ;
+}
+
+div.precise-file-type-icon-mkv::before {
+    content: 'mkv' !important;
+    ;
+}
+
+div.precise-file-type-icon-fh10::before {
+    content: 'fh10' !important;
+    ;
+}
+
+div.precise-file-type-icon-wma::before {
+    content: 'wma' !important;
+    ;
+}
+
+div.precise-file-type-icon-pdn::before {
+    content: 'pdn' !important;
+    ;
+}
+
+div.precise-file-type-icon-map::before {
+    content: 'map' !important;
+    ;
+}
+
+div.precise-file-type-icon-hip::before {
+    content: 'hip' !important;
+    ;
+}
+
+div.precise-file-type-icon-ts::before {
+    content: 'ts' !important;
+    ;
+}
+
+div.precise-file-type-icon-ogg::before {
+    content: 'ogg' !important;
+    ;
+}
+
+div.precise-file-type-icon-itl::before {
+    content: 'itl' !important;
+    ;
+}
+
+div.precise-file-type-icon-aep::before {
+    content: 'aep' !important;
+    ;
+}
+
+div.precise-file-type-icon-avi::before {
+    content: 'avi' !important;
+    ;
+}
+
+div.precise-file-type-icon-mov::before {
+    content: 'mov' !important;
+    ;
+}
+
+div.precise-file-type-icon-mid::before {
+    content: 'mid' !important;
+    ;
+}
+
+div.precise-file-type-icon-m4a::before {
+    content: 'm4a' !important;
+    ;
+}
+
+div.precise-file-type-icon-cdr::before {
+    content: 'cdr' !important;
+    ;
+}
+
+div.precise-file-type-icon-ai::before {
+    content: 'ai' !important;
+    ;
+}
+
+div.precise-file-type-icon-xpl::before {
+    content: 'xpl' !important;
+    ;
+}
+
+div.precise-file-type-icon-rgssad::before {
+    content: 'rgssad' !important;
+    ;
+}
+
+div.precise-file-type-icon-srt::before {
+    content: 'srt' !important;
+    ;
+}
+
+div.precise-file-type-icon-vdf::before {
+    content: 'vdf' !important;
+    ;
+}
+
+div.precise-file-type-icon-ico::before {
+    content: 'ico' !important;
+    ;
+}
+
+div.precise-file-type-icon-fh11::before {
+    content: 'fh11' !important;
+    ;
+}
+
+div.precise-file-type-icon-wav::before {
+    content: 'wav' !important;
+    ;
+}
+
+div.precise-file-type-icon-aiff::before {
+    content: 'aiff' !important;
+    ;
+}
+
+div.precise-file-type-icon-feq::before {
+    content: 'feq' !important;
+    ;
+}
+
+div.precise-file-type-icon-3gpp::before {
+    content: '3gpp' !important;
+    ;
+}
+
+div.precise-file-type-icon-gc::before {
+    content: 'gc' !important;
+    ;
+}
+
+div.precise-file-type-icon-ithmb::before {
+    content: 'ithmb' !important;
+    ;
+}
+
+div.precise-file-type-icon-itdb::before {
+    content: 'itdb' !important;
+    ;
+}
+
+div.precise-file-type-icon-m4v::before {
+    content: 'm4v' !important;
+    ;
+}
+
+div.precise-file-type-icon-m3u::before {
+    content: 'm3u' !important;
+    ;
+}
+
+div.precise-file-type-icon-wad::before {
+    content: 'wad' !important;
+    ;
+}
+
+div.precise-file-type-icon-sfl::before {
+    content: 'sfl' !important;
+    ;
+}
+
+div.precise-file-type-icon-sfk::before {
+    content: 'sfk' !important;
+    ;
+}
+
+div.precise-file-type-icon-lvl::before {
+    content: 'lvl' !important;
+    ;
+}
+
+div.precise-file-type-icon-mp4::before {
+    content: 'mp4' !important;
+    ;
+}
+
+div.precise-file-type-icon-aif::before {
+    content: 'aif' !important;
+    ;
+}
+
+div.precise-file-type-icon-mp3::before {
+    content: 'mp3' !important;
+    ;
+}
+
+div.precise-file-type-icon-ipa::before {
+    content: 'ipa' !important;
+    ;
+}
+
+div.precise-file-type-icon-jps::before {
+    content: 'jps' !important;
+    ;
+}
+
+div.precise-file-type-icon-indd::before {
+    content: 'indd' !important;
+    ;
+}
+
+div.precise-file-type-icon-vfs::before {
+    content: 'vfs' !important;
+    ;
+}
+
+div.precise-file-type-icon-itc2::before {
+    content: 'itc2' !important;
+    ;
+}
+
+div.precise-file-type-icon-kmz::before {
+    content: 'kmz' !important;
+    ;
+}
+
+div.precise-file-type-icon-cr2::before {
+    content: 'cr2' !important;
+    ;
+}
+
+div.precise-file-type-icon-dss::before {
+    content: 'dss' !important;
+    ;
+}
+
+div.precise-file-type-icon-ppt::before {
+    content: 'ppt' !important;
+    ;
+}
+
+div.precise-file-type-icon-pptx::before {
+    content: 'pptx' !important;
+    ;
+}
+
+div.precise-file-type-icon-odp::before {
+    content: 'odp' !important;
+    ;
+}

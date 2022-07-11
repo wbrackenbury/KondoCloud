@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>th-list</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Final-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-50" transform="translate(-801.000000, -31.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-37">
+                <g id="Group-30" transform="translate(0.000000, 10.000000)">
+                    <g id="Group-29" transform="translate(119.000000, 1.000000)">
+                        <g id="th-list" transform="translate(682.000000, 20.000000)">
+                            <path d="M12.5454545,11.8888889 L7.45454545,11.8888889 C6.65236364,11.8888889 6,12.5865556 6,13.4444444 C6,14.3023333 6.65236364,15 7.45454545,15 L12.5454545,15 C13.3476364,15 14,14.3023333 14,13.4444444 C14,12.5865556 13.3476364,11.8888889 12.5454545,11.8888889 Z M12.5454545,6.44444444 L7.45454545,6.44444444 C6.65236364,6.44444444 6,7.14211111 6,8 C6,8.85788889 6.65236364,9.55555556 7.45454545,9.55555556 L12.5454545,9.55555556 C13.3476364,9.55555556 14,8.85788889 14,8 C14,7.14211111 13.3476364,6.44444444 12.5454545,6.44444444 Z M12.5454545,1 L7.45454545,1 C6.65236364,1 6,1.69766667 6,2.55555556 C6,3.41344444 6.65236364,4.11111111 7.45454545,4.11111111 L12.5454545,4.11111111 C13.3476364,4.11111111 14,3.41344444 14,2.55555556 C14,1.69766667 13.3476364,1 12.5454545,1 Z" id="Shape"></path>
+                            <circle id="Oval" cx="2" cy="13" r="2"></circle>
+                            <circle id="Oval" cx="2" cy="8" r="2"></circle>
+                            <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

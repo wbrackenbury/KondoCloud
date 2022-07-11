@@ -1,0 +1,81 @@
+/***********************************************************/
+
+/*               ADDITIONAL STYLES FOR SEARCH              */
+
+/***********************************************************/
+
+.search-row-cont {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    flex-wrap: nowrap;
+}
+
+body .elfinder .search-row-cont div {
+    margin: 0px;
+}
+
+.search-row-title {
+    /* font-family: Arial; */
+    font-size: 12px;
+    font-weight: bold;
+    flex-basis: 30%;
+    padding: 5px;
+    text-align: left;
+}
+
+.search-row-meat {
+    padding: 5px;
+    flex-basis: 60%;
+    min-width: 100px;
+    min-height: 10px;
+}
+
+.search-dropdown {
+    border-bottom: 1px solid grey;
+    /* font-family: Arial; */
+    font-size: 12px;
+    text-align: left;
+    transition: 0.2s;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search-dropdown:hover {
+    /* filter: opacity(60%); */
+    background-color: #bdbdbd;
+}
+
+.search-dropdown:after {
+    content: '\25BC';
+    float: right;
+}
+
+.search-drop-content {
+    min-height: 15px;
+    position: fixed;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.search-drop-item {
+    /* font-family: Arial; */
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: grey;
+}
+
+.search-drop-item:hover {
+    color: white;
+    background-color: #bdbdbd;
+}
+
+.search-drop-item-border {
+    height: 0px;
+    border-bottom: 1px solid grey;
+}

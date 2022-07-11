@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="12px" viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>folder-black</title>
+    <desc>Created with Sketch.</desc>
+    <g id="inversion" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="folder-black" fill="#000000" fill-rule="nonzero">
+            <path d="M11.6666667,1.5 L7,1.5 C7,0.672 6.3031111,0 5.4444444,0 L2.3333333,0 C1.0468889,0 0,1.0095 0,2.25 L0,9.75 C0,10.9905 1.0468889,12 2.3333333,12 L11.6666667,12 C12.9531111,12 14,10.9905 14,9.75 L14,3.75 C14,2.5095 12.9531111,1.5 11.6666667,1.5 Z M2.3333333,1.5 L5.4444444,1.5 C5.4444444,2.328 6.1413333,3 7,3 L11.6666667,3 C12.096,3 12.4444444,3.336 12.4444444,3.75 L1.5555556,3.75 L1.5555556,2.25 C1.5555556,1.836 1.904,1.5 2.3333333,1.5 Z M11.6666667,10.5 L2.3333333,10.5 C1.904,10.5 1.5555556,10.164 1.5555556,9.75 L1.5555556,4.5 L12.4444444,4.5 L12.4444444,9.75 C12.4444444,10.164 12.096,10.5 11.6666667,10.5 Z" id="folder"></path>
+        </g>
+    </g>
+</svg>

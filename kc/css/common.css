@@ -1,0 +1,523 @@
+/*********************************************/
+
+/*            COMMON ELFINDER STUFFS         */
+
+/*********************************************/
+
+/* for old jQuery UI */
+
+.ui-front {
+    z-index: 100;
+}
+
+/* style reset */
+
+div.elfinder *, div.elfinder :after, div.elfinder :before {
+    box-sizing: content-box;
+}
+
+div.elfinder fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+}
+
+div.elfinder legend {
+    display: block;
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    width: auto;
+    margin-bottom: 0;
+}
+
+/* base container */
+
+div.elfinder {
+    padding: 0;
+    position: relative;
+    display: block;
+    visibility: visible;
+    font-size: 18px;
+    /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+}
+
+/* prevent auto zoom on iOS */
+
+.elfinder-ios input, .elfinder-ios select, .elfinder-ios textarea {
+    font-size: 16px !important;
+}
+
+/* full screen mode */
+
+.elfinder.elfinder-fullscreen>.ui-resizable-handle {
+    display: none;
+}
+
+.elfinder-font-mono {
+    line-height: 2ex;
+}
+
+/* in lazy execution status */
+
+.elfinder.elfinder-processing * {
+    cursor: progress !important
+}
+
+.elfinder.elfinder-processing.elfinder-touch .elfinder-workzone:after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    content: '';
+    left: 0;
+    background-image: url(../img/progress.gif);
+    opacity: .6;
+    pointer-events: none;
+}
+
+/* for disable select of Touch devices */
+
+/* .elfinder *:not(input):not(textarea):not(select):not([contenteditable=true]), .elfinder-contextmenu *:not(input):not(textarea):not(select):not([contenteditable=true]) {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+} */
+
+.elfinder .overflow-scrolling-touch {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* right to left enviroment */
+
+.elfinder-rtl {
+    text-align: right;
+    direction: rtl;
+}
+
+/* nav and cwd container */
+
+.elfinder-workzone {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 70%;
+}
+
+/* container for recommendations */
+
+.elfinder-recommend {
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+    width: 30%;
+    background: #c4c4c4;
+}
+
+.elfinder-recommend-most {
+    height: 47%;
+    background: white;
+    overflow-y: scroll;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+    transition: 0.2s;
+}
+
+.elfinder-recommend-find {
+    height: 47%;
+    overflow-y: scroll;
+    background: white;
+    margin-left: 10px;
+    transition: 0.2s;
+}
+
+.elfinder-recommend-log {
+    height: 14%;
+    overflow-y: scroll;
+    background: white;
+    margin-left: 10px;
+    transition: 0.2s;
+}
+
+.expose {
+    position: relative;
+}
+
+#overlay {
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99998;
+}
+
+.elfinder-recommend-accordion {
+    background-color: white;
+    margin-left: 10px;
+    margin-top: 5px;
+    transition: 0.2s;
+    height: 3%;
+    border: none;
+    outline: none;
+    width: 92%;
+    padding-left: 25px;
+    /* font-family: Arial; */
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.elfinder-recommend-accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+}
+
+.elfinder-recommend-accordion:hover {
+    background-color: #eee;
+}
+
+.accordion-active {
+    ;
+}
+
+.accordion-active:after {
+    content: "\2796";
+}
+
+/* dir/file permissions and symlink markers */
+
+.elfinder-lock, .elfinder-perms, .elfinder-symlink {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/toolbar.png);
+    background-repeat: no-repeat;
+    background-position: 0 -528px;
+}
+
+.elfinder-symlink {}
+
+/* noaccess */
+
+.elfinder-na .elfinder-perms {
+    background-position: 0 -96px;
+}
+
+/* read only */
+
+.elfinder-ro .elfinder-perms {
+    background-position: 0 -64px;
+}
+
+/* write only */
+
+.elfinder-wo .elfinder-perms {
+    background-position: 0 -80px;
+}
+
+/* volume type group */
+
+.elfinder-group .elfinder-perms {
+    background-position: 0 0px;
+}
+
+/* locked */
+
+.elfinder-lock {
+    background-position: 0 -656px;
+}
+
+/* drag helper */
+
+.elfinder-drag-helper {
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 60px;
+    padding: 0 0 0 25px;
+    z-index: 100000;
+    will-change: left, top;
+}
+
+.elfinder-drag-helper.html5-native {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+}
+
+/* drag helper status icon (default no-drop) */
+
+.elfinder-drag-helper-icon-status {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 42px;
+    top: 60px;
+    background: url('../img/toolbar.png') 0 -96px no-repeat;
+    display: block;
+}
+
+/* show "up-arrow" icon for move item */
+
+.elfinder-drag-helper-move .elfinder-drag-helper-icon-status {
+    background-position: 0 -720px;
+}
+
+/* show "plus" icon when ctrl/shift pressed */
+
+.elfinder-drag-helper-plus .elfinder-drag-helper-icon-status {
+    background-position: 0 -544px;
+}
+
+/* recommendation  */
+
+.elfinder-rec {
+    padding-left: 20px;
+    padding-top: 5px;
+    /* font-family: Arial; */
+    font-size: 75%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+}
+
+.elfinder-new-rec {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    align-items: stretch;
+}
+
+.elfinder-rec-del-sec {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 5%;
+    justify-content: flex-start;
+}
+
+.elfinder-new-rec-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 75%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    /* font-family: Arial; */
+    font-size: 14px;
+}
+
+.elfinder-new-rec-row {
+    display: flex;
+    justify-content: left;
+}
+
+.elfinder-new-butt-container {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.flex-line-break {
+    flex-basis: 100%;
+    height: 0px;
+}
+
+.elfinder-new-rec-butts {
+    padding-left: 10px;
+}
+
+.elfinder-rec-plus-butts {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.elfinder-name-hover {
+    padding-left: 10px
+}
+
+.elfinder-name-hover:hover {
+    text-decoration: underline
+}
+
+.elfinder-rec-butts {
+    display: inline-block;
+    width: 2%;
+    background: white;
+}
+
+.elfinder-acc-butt {
+    ;
+}
+
+.elfinder-rej-butt {
+    ;
+}
+
+.elfinder-rec-header {
+    font-size: 14px;
+    padding-left: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid grey;
+    margin-bottom: 5px;
+}
+
+.elfinder-rec-label {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 16px;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border-bottom: 1px solid grey; */
+    margin-left: 25px;
+    /* padding-right: 40%; */
+}
+
+.elfinder-rec-topline-span {
+    flex-basis: 50%;
+}
+
+.elfinder-rec-explain {
+    /* background-color: #2e2b22; */
+    background-color: #dedede;
+    height: 50px;
+    width: 300px;
+    border: 1px solid black;
+    font-size: 14px;
+    /* font-family: Arial; */
+    padding: 5px;
+    position: fixed;
+    /* color: white; */
+}
+
+/* .elfinder-rec-all-button-text {
+    font-size: 14px;
+    font-weight: normal;
+    padding-right: 5px;
+    flex-basis: 25%;
+    text-align: right;
+} */
+
+.elfinder-rec-space-helper {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.elfinder-folder-org-rec {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* files num in drag helper */
+
+.elfinder-drag-num {
+    display: inline-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 14px;
+    text-align: center;
+    padding: 1px 3px 1px 3px;
+    font-weight: bold;
+    color: #fff;
+    background-color: red;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+/* icon in drag helper */
+
+.elfinder-drag-helper .elfinder-cwd-icon {
+    margin: 0 0 0 -24px;
+    float: left;
+}
+
+/* transparent overlay */
+
+.elfinder-overlay {
+    position: absolute;
+    opacity: .2;
+    filter: Alpha(Opacity=20);
+}
+
+/* panels under/below cwd (for search field etc) */
+
+.elfinder .elfinder-panel {
+    position: relative;
+    background-image: none;
+    padding: 7px 12px;
+}
+
+/* for html5 drag and drop */
+
+[draggable=true] {
+    -khtml-user-drag: element;
+}
+
+/* for place holder to content editable elements */
+
+.elfinder [contentEditable=true]:empty:not(:focus):before {
+    content: attr(data-ph);
+}
+
+/* bottom tray */
+
+.elfinder div.elfinder-bottomtray {
+    position: fixed;
+    bottom: 0;
+    max-width: 100%;
+    opacity: .8;
+}
+
+.elfinder.elfinder-ltr div.elfinder-bottomtray {
+    left: 0;
+}
+
+.elfinder.elfinder-rtl div.elfinder-bottomtray {
+    right: 0;
+}
+
+/* tooltip */
+
+.elfinder-ui-tooltip, .elfinder .elfinder-ui-tooltip {
+    font-size: 14px;
+    padding: 2px 4px;
+}

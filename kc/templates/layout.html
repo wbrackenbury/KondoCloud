@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block head %}
+  <meta charset="utf-8" />
+  <title> Cloud Storage | User Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="google-site-verification" content="K-qMVmc-AF2K9PE4tICtj_Z1L0eFSEQgqMAXqdRSipw" />
+  <!-- css and jquery go here -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" -->
+  <!--   crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w="
+    crossorigin="anonymous" />
+
+
+  <script src="jquery/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+  <script src="jquery/jquery-ui-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://unpkg.com/driver.js/dist/driver.min.js"></script>
+
+  <link rel="stylesheet" href="jquery/jquery-ui-1.12.0.css" type="text/css">
+  <link rel="stylesheet" href="/static/drano.min.css">
+  <link rel="stylesheet" href="/css/misc.css" type="text/css">
+  <link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
+
+  {% endblock %}
+</head>
+
+<body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="modal" tabindex="-1" role="dialog" id="flashModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            {% for message in messages %}
+              <p>{{ message }}</p>
+            {% endfor %}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <script type="text/javascript" defer>
+      $(window).on('load',function(){
+          $('#flashModal').modal('show');
+      });
+    </script>
+
+    {% endif %}
+{% endwith %}
+
+{% block header %}
+
+<header>
+<div class="container">
+<div class="row">
+<div class="span12">
+  <h1>Cloud Storage Study</h1>
+</div>
+<div class="span12">
+
+</div>
+</div>
+</div>
+</header>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+{% endblock %}
+
+
+{% block footer %}
+<footer>
+<div class="container">
+<div class="row">
+<div class="span6">
+<nav class="nav">
+</nav>
+</div>
+<div class="span6">
+<div class="pull-right">
+<a href="https://super.cs.uchicago.edu/" target="_blank">UChicago SUPERgroup</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+{% endblock %}
+
+{% block scripts %}
+
+<!-- js goes here -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/event-source-polyfill/0.0.7/eventsource.min.js" integrity="sha256-CDGE4VgkI5jAecCKuZ+rW6h7V0ZzE9Xucxwg86Ug8ls=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="{{ url_for('static',filename='css.escape.js') }}" defer></script>
+{% endblock %}
+</body>
+</html>

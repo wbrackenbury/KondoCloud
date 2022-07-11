@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="main-content">
+  <div class="container">
+    <div class="landing-header">
+      <div class="page-header">
+        <div class="row">
+          <div class="span12">
+          </div>
+        </div>
+        <div id="explanation">
+        <h3 style="text-align: center; color: #447BB7">Make the study's changes permanent?</h3>
+
+          <hr>
+          <h4 style="text-align: justify; line-height: 23px;"> Currently, the changes you have made in this "sandbox" copy of your Google Drive account have had no effect on your Google Drive account. If, however, you wish to make these changes permanent, you may press the button labeled, "Yes, I wish to make these changes permanent" below, and our program will automatically perform these actions in your Google Drive before redirecting you to Prolific.
+
+            <br><br>
+            What this means:
+            <ul>
+              <li> Any folders that you <u>created</u> in the study will be automatically created in your Google Drive account with the same names</li>
+              <li> Any files or folders that you <u>renamed</u> will have this new name in your Google Drive account</li>
+              <li> Any files or folders that you <u>moved</u> to a new location will be moved to this new location in your Google Drive account</li>
+              <li> Any files or folders that you <u>deleted</u> during the study <b>are <u>not</u> automatically deleted</b>. Instead, they will be moved to a folder at the top level of your Google Drive that we will create called "Trashed by Prolific Study". If you are certain you wish to delete these files or folders, you may go back later and manually delete this folder</li>
+              <li> It is <b><u>not</u></b> possible to automatically reverse these actions if you change your mind. Therefore, be sure that you are comfortable with potentially reversing the actions you took manually if you change your mind about them later</li>
+            </ul>
+            <br>
+
+            Note also that if you wish to make these changes permanent, this will require logging in again to your Google Drive and providing full permissions to our application to see, create, and delete files and folders in your Google Drive account.
+
+            <br><br>
+            If you do not wish to make these changes, you may click the button labeled "No, I do not wish to make these changes permanent."</h4>
+
+        <br><br>
+
+        <script>
+
+          var key_to_child = {{ child_to_key|tojson }},
+              child_to_key = {{ key_to_child|tojson }},
+              check_depends = function(node, onlyActivate) {
+                  var this_spec_id = $(node).attr('id'),
+                      do_disable = !$(node).is(':checked'),
+                      depends = child_to_key[this_spec_id];
+
+                  if (onlyActivate) {
+                      do_disable = false;
+                  }
+
+                  for (var c of depends) {
+                      $('#' + c).attr('disabled', do_disable);
+                      if (!onlyActivate) {
+                          $('#' + c).prop('checked', !do_disable);
+                      }
+                  }
+              },
+              toggle_check = function(node, type) {
+                  return (function() {
+                      $.each($('input.' + type), function() {
+                          if ($(node).hasClass('curr-active')) {
+                              if (!$(this).attr('disabled') && $(this).is(':checked')) {
+                                  $(this).trigger('click');
+                              }
+                          } else {
+                              $(this).attr('disabled', false);
+                              $(this).prop('checked', true);
+                              check_depends(this, true);
+                          }
+                      });
+                      $(node).toggleClass('curr-active');
+                      $(node).toggleClass('curr-inactive');
+                  });
+              },
+              replay_post = function() {
+
+                  var sel_cmd_ids = new Set();
+                  $.each($('input:checked'), function() {
+                      var sel_id = this.classList[1];
+                      if (!sel_cmd_ids.has(sel_id)) {
+                          sel_cmd_ids.add(sel_id);
+                      }
+                  });
+                  var to_post = [...sel_cmd_ids];
+
+                  console.log(to_post);
+
+                  $.post("{{ url_for('replay_post') }}", {'cmd_ids': to_post});
+
+                  console.log("They posted?");
+              };
+
+          $(function() {
+
+              $("input").on('click', function(e) {
+                  check_depends(this, false);
+              });
+          });
+
+
+
+        </script>
+
+
+        <!-- <div class="button-container"> -->
+        <!--   <button class="curr-active" onclick="toggle_check(this, 'paste')();" style="width: 18%;">Move</button> -->
+        <!--   <button class="curr-active" onclick="toggle_check(this, 'duplicate')();" style="width: 18%;">Copy</button> -->
+        <!--   <button class="curr-active" onclick="toggle_check(this, 'rename')();" style="width: 18%;">Rename</button> -->
+        <!--   <button class="curr-active" onclick="toggle_check(this, 'mkdir')();" style="width: 18%;">Create Folder</button> -->
+        <!--   <button class="curr-active" onclick="toggle_check(this, 'rm')();" style="width: 18%;">"Delete"</button> -->
+        <!-- </div> -->
+
+
+        <div id="table-wrapper">
+          <div id="table-scroll">
+            <table id="replay-table">
+              <caption class="table-caption">Actions to be Performed</caption>
+              {% for row in commands  %}
+              <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <!-- <td><input class="{{ row[5]  }} {{ row[6] }}" type="checkbox" id="{{ row[4] }}" checked></td> -->
+              </tr>
+              {% endfor  %}
+            </table>
+          </div>
+        </div>
+        <br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="button-container">
+    <button onclick="window.location.href = '{{ url_for('replay_end') }}';" style="width: 45%;">No, I do not wish to make these changes permanent.</button>
+    <button onclick="replay_post(); window.location.href = '{{ url_for('replay_login') }}';" style="width: 45%;">Yes, I wish to make these changes permanent</button>
+</div>
+
+<br>
+{% endblock %}

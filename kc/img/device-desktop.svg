@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="21px" viewBox="0 0 24 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>device-desktop</title>
+    <desc>Created with Sketch.</desc>
+    <g id="mood-board-/-fact-finding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(-269.000000, -1.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="device-desktop" transform="translate(269.000000, 1.000000)">
+                <path d="M21,0 L3,0 C1.346,0 0,1.346 0,3 L0,14 C0,15.654 1.346,17 3,17 L9,17 L9,19 L6,19 C5.448,19 5,19.448 5,20 C5,20.552 5.448,21 6,21 L18,21 C18.552,21 19,20.552 19,20 C19,19.448 18.552,19 18,19 L15,19 L15,17 L21,17 C22.654,17 24,15.654 24,14 L24,3 C24,1.346 22.654,0 21,0 Z M14,19 L10,19 L10,17 L14,17 L14,19 Z M22,14 C22,14.551 21.551,15 21,15 L3,15 C2.449,15 2,14.551 2,14 L2,3 C2,2.449 2.449,2 3,2 L21,2 C21.551,2 22,2.449 22,3 L22,14 Z M20,3 L4,3 C3.45,3 3,3.45 3,4 L3,12 C3,12.55 3.45,13 4,13 L20,13 C20.55,13 21,12.55 21,12 L21,4 C21,3.45 20.55,3 20,3 Z M20,12 L4,12 L4,4 L20,4 L20,12 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

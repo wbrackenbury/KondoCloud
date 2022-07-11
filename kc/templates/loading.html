@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="main-content">
+  <div class="container">
+    <div class="landing-header">
+        <div class="page-header">
+
+        <script type="text/javascript">
+        var flag = 0
+        setInterval(function()
+        {
+           $.getJSON("/get_active", function(json)
+                     {
+                         var perc = document.getElementById("bar");
+                         if (json.forward_value == true && flag == 0)
+                         {
+                             window.location.href="/qual_qs";
+                             flag = 1
+                         }
+                     });
+        }, 5000);
+    </script>
+        <center>
+          <h3 style="text-align:center;">Please wait while we process
+            the file actions you took.
+            <br>
+            You will be automatically redirected
+            when this process is complete. This may take up to 10 minutes.
+	  </h3>
+          <div id="container"></div>
+
+          <h3>
+            <img src="static/img/loading.gif" style="width:150px;height:150px;">
+          </h3>
+        </center>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

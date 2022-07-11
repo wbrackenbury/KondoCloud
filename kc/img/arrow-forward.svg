@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="10px" viewBox="0 0 11 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>arrow-forward</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Final-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5" transform="translate(-235.000000, -33.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-29" transform="translate(119.000000, 11.000000)">
+                <g id="Group-28">
+                    <g id="Group-9">
+                        <path d="M122.1875,22 C122.0115,22 121.8355,22.0666875 121.701437,22.20075 C121.567375,22.3355 121.5,22.5115 121.5,22.6875 L121.5,24.4468125 C118.40625,24.7891875 116,27.40925 116,30.59375 L116,31.28125 C117.543437,28.9279375 119.609375,28.58625 121.5,28.5388125 L121.5,30.25 C121.5,30.4253125 121.567375,30.602 121.701437,30.7360625 C121.8355,30.870125 122.0115,30.9375 122.1875,30.9375 C122.3635,30.9375 122.5395,30.870125 122.673563,30.7360625 L127,26.46875 L122.673563,22.20075 C122.5395,22.0666875 122.3635,22 122.1875,22 Z" id="arrow-forward"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

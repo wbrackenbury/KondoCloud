@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="14px" viewBox="0 0 17 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>arrow-left-thick</title>
+    <desc>Created with Sketch.</desc>
+    <g id="mood-board-/-fact-finding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(-364.000000, -346.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="arrow-left-thick" transform="translate(364.000000, 346.000000)">
+                <path d="M15,5 L7.756,5 L9.342,3.414 C10.123,2.633 10.123,1.365 9.342,0.586 C8.561,-0.195 7.295,-0.195 6.514,0.586 L0.1,7 L6.514,13.414 C6.904,13.805 7.416,14 7.928,14 C8.44,14 8.951,13.805 9.342,13.414 C10.123,12.633 10.123,11.365 9.342,10.586 L7.756,9 L15,9 C16.104,9 17,8.104 17,7 C17,5.895 16.104,5 15,5 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

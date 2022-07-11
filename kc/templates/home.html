@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="main-content">
+  <div class="container">
+    <div class="landing-header">
+      <div class="page-header">
+        <div class="row">
+          <div class="span12">
+          </div>
+        </div>
+
+        <img style="height: 100px; margin-left: auto; margin-right: auto; display: block" src="/img/cloudassist_logo.png">
+        <div id="explanation">
+
+          <h3 style="text-align: center; color: #447BB7">Home</h3>
+          <table>
+
+            <tr><h4 style="text-align: justify; line-height: 23px;">
+                CloudAssist is a research prototype from the
+                <a href='https://super.cs.uchicago.edu' target="_blank"> SUPERgroup at University of Chicago</a>
+                designed to study how users of cloud storage services understand, organize
+                and manage their files. To do this, it scans the files in your Google Drive, and uses
+                this information to identify which files in your account are likely to be similar
+                to each other. It then offers recommendations of file actions you might
+                find useful. It does this in a custom file management interface that we host
+                in this same application. For more information on why we request
+                particular permissions for your Google Drive account, and how
+                we handle your data, you may read our
+                <a href="{{ url_for('policy') }}" target="_blank">Privacy Policy</a>.</h4></tr>
+
+            <tr><h4 style="text-align: justify; line-height: 23px;">
+                For this study, we ask your permission to scan your Google Drive
+                account in order to find groups of files we believe would be
+                recommended together. We then offer explanations for this
+            behavior, and ask your perceptions of these explanations.</h4></tr>
+
+            <tr><h4 style="text-align: justify; line-height: 23px;">
+                If you wish to continue with the study, please click the "Continue to
+                research consent form" button below. You may preview this consent
+                form <u><a href="{{ url_for('consent') }}" target="_blank">here</a></u>.
+                If you do not wish to continue, you may click "Return
+                assignment", which will return the assignment from Prolific.</h4></tr>
+
+        </div>
+
+        <br>
+
+        <div style="
+                    display: inline-block;
+                    outline: none;
+                    background: none;
+                    width: 100%;
+                    text-align: center;">
+          <button onclick="window.location.href = '{{ url_for('full_consent') }}';"style="width: 25%;">Continue to research consent form</button>
+          <button onclick="window.location.href = '{{ url_for('thanks') }}';" style="width: 25%;">Return assignment</button>
+        </div>
+      </div>
+      </table>
+
+      <br>
+
+{% endblock %}

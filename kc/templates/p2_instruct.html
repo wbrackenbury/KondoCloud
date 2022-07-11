@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="main-content">
+  <div class="container">
+    <div class="landing-header">
+      <div class="page-header">
+        <div class="row">
+          <div class="span12">
+          </div>
+        </div>
+
+        <img style="height: 100px; margin-left: auto; margin-right: auto; display: block" src="/img/cloudassist_logo.png">
+        <div id="explanation">
+
+          <h3 style="text-align: center; color: #447BB7">Part Two Instructions</h3>
+          <table>
+
+            <tr><h4 style="text-align: justify; line-height: 23px;"></h4></tr>
+
+            <tr><h4 style="text-align: justify; line-height: 23px;">
+                In a moment, you will be directed to an interface for organizing your Google Drive account.
+                This interface will likely look familiar to other file-management interfaces you have used.
+                This interface will display the files in your personal Google Drive account.
+            </h4></tr>
+
+            <tr><h4 style="text-align: justify; line-height: 23px;">
+                We ask that you spend approximately <b><u>30 minutes organizing your Google Drive account</u></b> using this interface.
+                Your actions may include creating new folders, moving files to different folders, deleting files and folders, or renaming files and folders.
+            </h4></tr>
+
+            <tr><h4 style="text-align: justify; line-height: 23px;">
+                This activity occurs in a simulated environment.
+                This means that <b><u>none of the activities performed during
+                    the study in this interface will have any effect on your
+                    actual Google Drive account</u></b>.
+            </h4></tr>
+
+            <tr><h4 style="text-align: justify; line-height: 23px;">
+                After you have finished, we will ask you questions about the actions you took.
+                You can now navigate to the next part of the study by clicking the button below.
+            </h4></tr>
+
+        </div>
+
+        <br>
+
+        <div style="
+                    display: inline-block;
+                    outline: none;
+                    background: none;
+                    width: 100%;
+                    text-align: center;">
+          <button onclick="window.location.href = '{{ p2_route }}';"style="width: 25%;">Continue to Part 2</button>
+        </div>
+      </div>
+      </table>
+
+      <br>
+
+{% endblock %}

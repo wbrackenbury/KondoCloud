@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="main-content">
+  <div class="container">
+    <div class="landing-header">
+      <div class="page-header">
+        <div class="row">
+          <div class="span12">
+          </div>
+        </div>
+
+        <img style="height: 100px; margin-left: auto; margin-right: auto; display: block" src="/img/cloudassist_logo.png">
+        <div id="explanation">
+
+          <h3 style="text-align: center; color: #447BB7">Login Permissions Failure</h3>
+          <table>
+
+            <tr><h4 style="text-align: justify; line-height: 23px;">
+                In order to continue with the study, we ask that you enable all
+                the requested permissions (clicking all checkboxes) in the
+                consent screen. We require all these permissions in order
+                to enable the functionality in our follow-up study. You may
+            click the button below to be redirected again to the login screen.</h4></tr>
+
+            <tr><h4 style="text-align: justify; line-height: 23px;">
+                If you prefer not to allow these permissions, we ask that you close
+                the window and return the submission to Prolific.
+                We thank you for your interest in our study!</h4></tr>
+
+
+        </div>
+
+        <br>
+
+        <div style="
+                    display: inline-block;
+                    outline: none;
+                    background: none;
+                    width: 100%;
+                    text-align: center;">
+          <button onclick="window.location.href = '{{ url_for('true_launch') }}';"style="width: 33%;">Return to login</button>
+        </div>
+      </div>
+      </table>
+
+      <br>
+
+{% endblock %}

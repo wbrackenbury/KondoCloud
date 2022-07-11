@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="main-content">
+  <div class="container">
+    <div class="landing-header">
+      <div class="page-header">
+        <div id="welcome" style="text-align: center;">
+            <h3>Thank you for agreeing to participate in our study!</h3>
+        </div>
+        <br>
+        <br>  
+        <center>
+            
+        <script type="text/javascript">function CheckRadio() {
+          var db_val = document.getElementById("db_0").checked;
+          var gd_val = document.getElementById("gd_0").checked;
+          if (db_val ==true && gd_val ==true)
+          {
+            document.getElementById("t_optional").style.display = '';
+          }
+          else{document.getElementById("t_optional").style.display = 'none';
+          ["opt_0", "opt_1", "opt_2"].forEach(function(id) {document.getElementById(id).checked = false;})
+          }
+          }</script>
+
+        <script type="text/javascript">function CheckInputs() {
+          var db_val = document.getElementById("db_0").checked;
+          var gd_val = document.getElementById("gd_0").checked;
+          if ($("input:radio[name=dropbox]").is(':checked') && $("input:radio[name=gdrive]").is(':checked'))
+          {
+            if (db_val ==true && gd_val ==true)
+            {if ($("input:radio[name=opt]").is(':checked')){document.getElementById("UserForm").submit();}
+            else{alert("Please answer both questions before proceeding.");}
+            }else{document.getElementById("UserForm").submit();}
+          }else{alert("Please answer both questions before proceeding.");}}
+        </script>
+
+        <div class="row">
+            <form id= "UserForm" method="post" action="/submit_form">
+              <input name=csrf_token type=hidden value="{{ csrf_token }}">
+                <table width="70%" border="0px" style="margin-left:80px;">
+                    <tr>
+                        <td style="padding:0 8px 0 5px;">
+                           <h4><img src="static/img/dropbox.png" style="width:30px;height:30px;"></td><td><h4> Please choose which of the following best characterizes your use of Dropbox.</h4> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           &nbsp;&nbsp;&nbsp;<input type="radio" id= "db_0" name="dropbox" value="0" onclick="CheckRadio();"></td><td><label for="db_0">I have used my Dropbox account for at least 3 months. My account contains at least 100 files, and some of these files are shared with others</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           &nbsp;&nbsp;&nbsp;<input type="radio" id= "db_1" name="dropbox" value="1" onclick="CheckRadio();"></td><td><label for="db_1">I have a Dropbox account, but have used it for less than 3 months or have fewer than 100 files stored in it</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           &nbsp;&nbsp;&nbsp;<input type="radio" id= "db_2" name="dropbox" value="2" onclick="CheckRadio();"></td><td><label for="db_2">I do not have a Dropbox account</label><br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                    <td><br></td><td></td>
+                    </tr>       
+                    <tr>
+                        <td style="padding:0 8px 0 5px;">
+                           <h4><img src="static/img/gdrive.png" style="width:30px;height:30px;"></td><td><h4> Please choose which of the following best characterizes your use of Google Drive.</h4> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0 8px 0 5px;">
+                           &nbsp;&nbsp;&nbsp;<input type="radio" id= "gd_0" name="gdrive" value="0" onclick="CheckRadio();"></td><td><label for="gd_0">I have used my Google Drive account for at least 3 months. My account contains at least 100 files, and some of these files are shared with others.</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0 8px 0 5px;">
+                           &nbsp;&nbsp;&nbsp;<input type="radio" id= "gd_1" name="gdrive" value="1" onclick="CheckRadio();"></td><td><label for="gd_1">I have a Google Drive account, but have used it for less than 3 months or have fewer than 100 files stored in it</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0 8px 0 5px;">
+                           &nbsp;&nbsp;&nbsp;<input type="radio" id= "gd_2" name="gdrive" value="2" onclick="CheckRadio();"></td><td><label for="gd_2">I do not have a Google Drive account</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td><br></td>
+                    </tr>
+                </table>
+                <table id="t_optional" width="70%" border="0px" style="margin-left:80px; display:none;">
+                    <tr>
+                        <td>
+                           <h4>&nbsp;&nbsp;&nbsp;Which statement is most accurate?</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           &nbsp;&nbsp;&nbsp;<input type="radio" id= "opt_0" name="opt" value="0" onclick="CheckRadio();"><label for="opt_0">&nbsp;&nbsp;&nbsp;I use Dropbox more often than Google Drive</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           &nbsp;&nbsp;&nbsp;<input type="radio" id= "opt_1" name="opt" value="1" onclick="CheckRadio();"><label for="opt_1">&nbsp;&nbsp;&nbsp;I use Google Drive more often than Dropbox</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           &nbsp;&nbsp;&nbsp;<input type="radio" id= "opt_2" name="opt" value="2" onclick="CheckRadio();"><label for="opt_2">&nbsp;&nbsp;&nbsp;I use the two about equally often</label><br>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        </center>
+
+
+
+        <div class="actions">
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4">  
+              <a class="btn btn-large btn-primary" onclick="CheckInputs();">
+                Proceed
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal hide fade" id="opt-in-modal">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        
+{% endblock %}
