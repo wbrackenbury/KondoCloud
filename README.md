@@ -43,7 +43,7 @@ by Google is required before accessing such sensitive scopes of other users.
 However, one may test this code on their own Google Drive
 (e.g., [here](https://developers.google.com/drive/api/quickstart/python)).
 
-* Note: * Given that this is a research artifact and not maintained, many
+**Note:** Given that this is a research artifact and not maintained, many
 vulnerabilities have been discovered in required libraries since the study
 launch. As this code accesses sensitive data, it is highly recommended
 to update the requirements before testing the code for oneself.
